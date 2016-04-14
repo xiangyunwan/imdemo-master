@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bjmgf_message_chat_content_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gf_message_chat_list_msg_bg">
+
+    <RelativeLayout
+        android:id="@+id/bjmgf_message_chat_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gf_50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gf_main_title_bg">
+
+        <RelativeLayout
+            android:id="@+id/bjmgf_message_chat_back"
+            android:layout_width="@dimen/gf_50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/gf_15dp"
+                android:layout_height="@dimen/gf_25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gf_15dp"
+                android:src="@mipmap/bjmgf_back" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bjmgf_message_chat_profile"
+            android:layout_width="@dimen/gf_25dp"
+            android:layout_height="@dimen/gf_25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/gf_15dp"
+            android:src="@mipmap/bjmgf_profile" />
+
+        <TextView
+            android:id="@+id/bjmgf_message_chat_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/gf_20dp"
+            android:layout_toLeftOf="@id/bjmgf_message_chat_profile"
+            android:layout_toRightOf="@id/bjmgf_message_chat_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/gf_20sp" />
+
+    </RelativeLayout>
+
+    <com.gf.platform.gfplatform.widget.chatkeyboard.ChatKeyBoard
+        android:id="@+id/bjmgf_message_chat_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <com.gf.platform.gfplatform.widget.dropdownlistview.DropDownListView
+        android:id="@+id/bjmgf_message_chat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:transcriptMode="normal"
+        android:overScrollMode="never"
+        android:layout_above="@id/bjmgf_message_chat_keyboard"
+        android:layout_below="@id/bjmgf_message_chat_title_rl"/>
+
+</RelativeLayout>
